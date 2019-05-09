@@ -10,11 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var randomWord: UILabel!
+    
+    let wordArray = ["Nature", "Waterfall", "Rabbit"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func getRandomWord(_ sender: Any) {
+        
+        let randomNum = Int.random(in: 0 ..< wordArray.count)
+        
+        randomWord.text =  wordArray[randomNum]
+        
+        let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
+            self.randomWord.text = "Press the button to get word"
+        }
+    }
+    
 }
 
