@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var randomWord: UILabel!
     
-    let wordArray = ["Nature", "Waterfall", "Rabbit"]
+    let wordArray = ["Nature", "Secret", "Imagination", "Old","Water","Abstract","Weathered","Calm","Fashion","Colourful"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         randomWord.text =  wordArray[randomNum]
         
-        let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
+        let timer = Timer.scheduledTimer(withTimeInterval: 45.0, repeats: false) { timer in
             self.randomWord.text = "Press the button to get word"
         }
     }
